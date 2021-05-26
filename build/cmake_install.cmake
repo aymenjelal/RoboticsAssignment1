@@ -133,6 +133,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/aymen/Documents/arm_ws/build/gtest/cmake_install.cmake")
   include("/home/aymen/Documents/arm_ws/build/arm_description/cmake_install.cmake")
   include("/home/aymen/Documents/arm_ws/build/arm_lib/cmake_install.cmake")
+  include("/home/aymen/Documents/arm_ws/build/question1/cmake_install.cmake")
   include("/home/aymen/Documents/arm_ws/build/arm_gazebo/cmake_install.cmake")
 
 endif()
