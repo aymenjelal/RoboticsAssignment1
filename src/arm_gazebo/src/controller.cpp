@@ -20,7 +20,11 @@ namespace gazebo
 			// // set your PID values
 			this->pid = common::PID(30.1, 10.01, 10.03);
 
-			auto joint_name = "arm1_arm2_joint";
+			auto joint_name1 = "chasis_arm1_joint";
+			auto joint_name2 = "arm1_arm2_joint";
+			auto joint_name3 = "arm2_arm3_joint";
+			auto joint_name4 = "arm3_arm4_joint";
+	
 
 			std::string name = this->model->GetJoint("arm1_arm2_joint")->GetScopedName();
 
@@ -49,10 +53,18 @@ namespace gazebo
 			// 1 returns rotation accross Y axis
 			// 2 returns rotation accross Z axis
 			// If the Joint has only Z axis for rotation, 0 returns that value and 1 and 2 return nan
-			double a1 = physics::JointState(this->model->GetJoint("arm1_arm2_joint")).Position(0);
+			double a1 = physics::JointState(this->model->GetJoint("chasis_arm1_joint")).Position(0);
+			double a2 = physics::JointState(this->model->GetJoint("arm1_arm2_joint")).Position(0);
+			double a3 = physics::JointState(this->model->GetJoint("arm2_arm3_joint")).Position(0);
+			double a4 = physics::JointState(this->model->GetJoint("arm3_arm4_joint")).Position(0);
+		
 			// double a2 = this->model->GetJoint("chasis_arm1_joint").Position(0);
 			// double a3 = physics::JointState(this->model->GetJoint("chasis_arm1_joint")).Position(2);
-			std::cout << "Current arm1_arm2_joint values: " << a1 * 180.0 / M_PI << std::endl;
+			std::cout << "Current chasis_arm1_joint: " << a1 * 180.0 / M_PI << std::endl;
+			std::cout << "Current arm1_arm2_joint values: " << a2 * 180.0 / M_PI << std::endl;
+			std::cout << "Current arm2_arm3_joint values: " << a3 * 180.0 / M_PI << std::endl;
+			std::cout << "Current arm3_arm4_joint values: " << a4 * 180.0 / M_PI << std::endl;
+			
 		}
 
 		// a pointer that points to a model object
