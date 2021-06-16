@@ -7,4 +7,10 @@
           JOINT3
           JOINT4-VAL
           JOINT4
+          ARM_PALM-VAL
+          ARM_PALM
+          PALM_FINGER-VAL
+          PALM_FINGER
+          FINGER_FINGER_TIP-VAL
+          FINGER_FINGER_TIP
 ))

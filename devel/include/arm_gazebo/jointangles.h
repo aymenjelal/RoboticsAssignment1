@@ -27,13 +27,19 @@ struct jointangles_
     : joint1(0.0)
     , joint2(0.0)
     , joint3(0.0)
-    , joint4(0.0)  {
+    , joint4(0.0)
+    , arm_palm(0.0)
+    , palm_finger(0.0)
+    , finger_finger_tip(0.0)  {
     }
   jointangles_(const ContainerAllocator& _alloc)
     : joint1(0.0)
     , joint2(0.0)
     , joint3(0.0)
-    , joint4(0.0)  {
+    , joint4(0.0)
+    , arm_palm(0.0)
+    , palm_finger(0.0)
+    , finger_finger_tip(0.0)  {
   (void)_alloc;
     }
 
@@ -50,6 +56,15 @@ struct jointangles_
 
    typedef float _joint4_type;
   _joint4_type joint4;
+
+   typedef double _arm_palm_type;
+  _arm_palm_type arm_palm;
+
+   typedef double _palm_finger_type;
+  _palm_finger_type palm_finger;
+
+   typedef double _finger_finger_tip_type;
+  _finger_finger_tip_type finger_finger_tip;
 
 
 
@@ -83,7 +98,10 @@ bool operator==(const ::arm_gazebo::jointangles_<ContainerAllocator1> & lhs, con
   return lhs.joint1 == rhs.joint1 &&
     lhs.joint2 == rhs.joint2 &&
     lhs.joint3 == rhs.joint3 &&
-    lhs.joint4 == rhs.joint4;
+    lhs.joint4 == rhs.joint4 &&
+    lhs.arm_palm == rhs.arm_palm &&
+    lhs.palm_finger == rhs.palm_finger &&
+    lhs.finger_finger_tip == rhs.finger_finger_tip;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -140,12 +158,12 @@ struct MD5Sum< ::arm_gazebo::jointangles_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "99df565d35e16998dcc56f1295c43447";
+    return "6cb4ec54877c89eaedfc2a0339a0dead";
   }
 
   static const char* value(const ::arm_gazebo::jointangles_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x99df565d35e16998ULL;
-  static const uint64_t static_value2 = 0xdcc56f1295c43447ULL;
+  static const uint64_t static_value1 = 0x6cb4ec54877c89eaULL;
+  static const uint64_t static_value2 = 0xedfc2a0339a0deadULL;
 };
 
 template<class ContainerAllocator>
@@ -168,6 +186,9 @@ struct Definition< ::arm_gazebo::jointangles_<ContainerAllocator> >
 "float32 joint2\n"
 "float32 joint3 \n"
 "float32 joint4\n"
+"float64 arm_palm\n"
+"float64 palm_finger\n"
+"float64 finger_finger_tip\n"
 ;
   }
 
@@ -190,6 +211,9 @@ namespace serialization
       stream.next(m.joint2);
       stream.next(m.joint3);
       stream.next(m.joint4);
+      stream.next(m.arm_palm);
+      stream.next(m.palm_finger);
+      stream.next(m.finger_finger_tip);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -216,6 +240,12 @@ struct Printer< ::arm_gazebo::jointangles_<ContainerAllocator> >
     Printer<float>::stream(s, indent + "  ", v.joint3);
     s << indent << "joint4: ";
     Printer<float>::stream(s, indent + "  ", v.joint4);
+    s << indent << "arm_palm: ";
+    Printer<double>::stream(s, indent + "  ", v.arm_palm);
+    s << indent << "palm_finger: ";
+    Printer<double>::stream(s, indent + "  ", v.palm_finger);
+    s << indent << "finger_finger_tip: ";
+    Printer<double>::stream(s, indent + "  ", v.finger_finger_tip);
   }
 };
 
