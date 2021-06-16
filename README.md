@@ -1,3 +1,10 @@
+## Robotics Assignment 2 
+
+1. Added to the model.sdf file 
+2. New endeffector controller added with the two commands 
+3. fk and ik services added 
+4. old controller edited to include ik 
+
 ## Robotics Assignment
 
 Question 1 is in the src/question1 

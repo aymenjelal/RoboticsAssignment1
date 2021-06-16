@@ -5,7 +5,10 @@
 #include <ignition/math/Vector3.hh>
 #include <iostream>
 #include "arm_gazebo/jointangles.h" 
-#include "ros/ros.h" 
+#include "ros/ros.h"
+#include "arm_gazebo/fk.h"
+#include "arm_gazebo/ik.h"
+
 namespace gazebo
 {
 	class ModelPush : public ModelPlugin
@@ -20,16 +23,23 @@ namespace gazebo
 			std::string jointname2 = this->model->GetJoint("arm1_arm2_joint")->GetScopedName();
 			std::string jointname3 = this->model->GetJoint("arm2_arm3_joint")->GetScopedName();
 			std::string jointname4 = this->model->GetJoint("arm3_arm4_joint")->GetScopedName();
+			std::string jointname5 = this->model->GetJoint("arm4_palm_joint")->GetScopedName(); 
 
 			
 			this->jointController->SetPositionTarget(jointname1,  msg->joint1);
 			this->jointController->SetPositionTarget(jointname2,  msg->joint2);
 			this->jointController->SetPositionTarget(jointname3,  msg->joint3);
 			this->jointController->SetPositionTarget(jointname4,  msg->joint4);
+			this->jointController->SetPositionTarget(jointname5,  msg->arm_palm);
+			
 
-			//this->catch_object(msg);
+			this->catch_object(msg);
 			
 		}
+		void getPositionsCallback(const arm_gazebo::endpositions::ConstPtr& msg){
+
+		}
+		
 		void Load(physics::ModelPtr _parent, sdf::ElementPtr /*_sdf*/)
 		{
 			// Store the pointer to the model
@@ -140,6 +150,9 @@ namespace gazebo
 	private: 
 		ros::Publisher pub;
 		ros::Subscriber sub; 
+		ros::ServiceClient fkClient;
+
+		ros::ServiceClient ikClient;
 		// 	// A joint controller object
 		// 	// Takes PID value and apply angular velocity
 		// 	//  or sets position of the angles
