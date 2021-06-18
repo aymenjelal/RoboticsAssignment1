@@ -54,6 +54,8 @@ CMAKE_BINARY_DIR = /home/aymen/Documents/arm_ws/build
 include arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/progress.make
 
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus: /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/msg/jointangles.l
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus: /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/msg/endpositions.l
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus: /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/msg/endeffectorcommand.l
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus: /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/srv/fk.l
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus: /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/srv/ik.l
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus: /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/manifest.l
@@ -64,22 +66,34 @@ arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus: /home/aymen/Documents/ar
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from arm_gazebo/jointangles.msg"
 	cd /home/aymen/Documents/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/aymen/Documents/arm_ws/src/arm_gazebo/msg/jointangles.msg -Iarm_gazebo:/home/aymen/Documents/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/msg
 
+/home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/msg/endpositions.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/msg/endpositions.l: /home/aymen/Documents/arm_ws/src/arm_gazebo/msg/endpositions.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from arm_gazebo/endpositions.msg"
+	cd /home/aymen/Documents/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/aymen/Documents/arm_ws/src/arm_gazebo/msg/endpositions.msg -Iarm_gazebo:/home/aymen/Documents/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/msg
+
+/home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/msg/endeffectorcommand.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/msg/endeffectorcommand.l: /home/aymen/Documents/arm_ws/src/arm_gazebo/msg/endeffectorcommand.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from arm_gazebo/endeffectorcommand.msg"
+	cd /home/aymen/Documents/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/aymen/Documents/arm_ws/src/arm_gazebo/msg/endeffectorcommand.msg -Iarm_gazebo:/home/aymen/Documents/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/msg
+
 /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/srv/fk.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/srv/fk.l: /home/aymen/Documents/arm_ws/src/arm_gazebo/srv/fk.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from arm_gazebo/fk.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from arm_gazebo/fk.srv"
 	cd /home/aymen/Documents/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/aymen/Documents/arm_ws/src/arm_gazebo/srv/fk.srv -Iarm_gazebo:/home/aymen/Documents/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/srv
 
 /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/srv/ik.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/srv/ik.l: /home/aymen/Documents/arm_ws/src/arm_gazebo/srv/ik.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from arm_gazebo/ik.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp code from arm_gazebo/ik.srv"
 	cd /home/aymen/Documents/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/aymen/Documents/arm_ws/src/arm_gazebo/srv/ik.srv -Iarm_gazebo:/home/aymen/Documents/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/srv
 
 /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp manifest code for arm_gazebo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating EusLisp manifest code for arm_gazebo"
 	cd /home/aymen/Documents/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo arm_gazebo std_msgs
 
 arm_gazebo_generate_messages_eus: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus
 arm_gazebo_generate_messages_eus: /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/msg/jointangles.l
+arm_gazebo_generate_messages_eus: /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/msg/endpositions.l
+arm_gazebo_generate_messages_eus: /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/msg/endeffectorcommand.l
 arm_gazebo_generate_messages_eus: /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/srv/fk.l
 arm_gazebo_generate_messages_eus: /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/srv/ik.l
 arm_gazebo_generate_messages_eus: /home/aymen/Documents/arm_ws/devel/share/roseus/ros/arm_gazebo/manifest.l

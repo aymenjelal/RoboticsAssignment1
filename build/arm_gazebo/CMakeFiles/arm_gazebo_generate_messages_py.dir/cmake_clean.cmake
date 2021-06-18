@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "/home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/__init__.py"
+  "/home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_endeffectorcommand.py"
+  "/home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_endpositions.py"
   "/home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_jointangles.py"
   "/home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/__init__.py"
   "/home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_fk.py"

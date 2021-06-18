@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::arm_gazebo::ik > {
   static const char* value()
   {
-    return "190b0d670a41214f1bd75146734182d2";
+    return "dbd2ec6e346a15ab820fca22b064b6fe";
   }
 
   static const char* value(const ::arm_gazebo::ik&) { return value(); }

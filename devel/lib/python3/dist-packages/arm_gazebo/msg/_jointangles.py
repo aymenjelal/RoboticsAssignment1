@@ -8,18 +8,16 @@ import struct
 
 
 class jointangles(genpy.Message):
-  _md5sum = "6cb4ec54877c89eaedfc2a0339a0dead"
+  _md5sum = "fda7246815f2a28291e4b07a8932dde9"
   _type = "arm_gazebo/jointangles"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """float32 joint1
 float32 joint2
 float32 joint3 
 float32 joint4
-float64 arm_palm
-float64 palm_finger
-float64 finger_finger_tip"""
-  __slots__ = ['joint1','joint2','joint3','joint4','arm_palm','palm_finger','finger_finger_tip']
-  _slot_types = ['float32','float32','float32','float32','float64','float64','float64']
+float32 arm_palm"""
+  __slots__ = ['joint1','joint2','joint3','joint4','arm_palm']
+  _slot_types = ['float32','float32','float32','float32','float32']
 
   def __init__(self, *args, **kwds):
     """
@@ -29,7 +27,7 @@ float64 finger_finger_tip"""
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       joint1,joint2,joint3,joint4,arm_palm,palm_finger,finger_finger_tip
+       joint1,joint2,joint3,joint4,arm_palm
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -48,18 +46,12 @@ float64 finger_finger_tip"""
         self.joint4 = 0.
       if self.arm_palm is None:
         self.arm_palm = 0.
-      if self.palm_finger is None:
-        self.palm_finger = 0.
-      if self.finger_finger_tip is None:
-        self.finger_finger_tip = 0.
     else:
       self.joint1 = 0.
       self.joint2 = 0.
       self.joint3 = 0.
       self.joint4 = 0.
       self.arm_palm = 0.
-      self.palm_finger = 0.
-      self.finger_finger_tip = 0.
 
   def _get_types(self):
     """
@@ -74,7 +66,7 @@ float64 finger_finger_tip"""
     """
     try:
       _x = self
-      buff.write(_get_struct_4f3d().pack(_x.joint1, _x.joint2, _x.joint3, _x.joint4, _x.arm_palm, _x.palm_finger, _x.finger_finger_tip))
+      buff.write(_get_struct_5f().pack(_x.joint1, _x.joint2, _x.joint3, _x.joint4, _x.arm_palm))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -88,8 +80,8 @@ float64 finger_finger_tip"""
       end = 0
       _x = self
       start = end
-      end += 40
-      (_x.joint1, _x.joint2, _x.joint3, _x.joint4, _x.arm_palm, _x.palm_finger, _x.finger_finger_tip,) = _get_struct_4f3d().unpack(str[start:end])
+      end += 20
+      (_x.joint1, _x.joint2, _x.joint3, _x.joint4, _x.arm_palm,) = _get_struct_5f().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -103,7 +95,7 @@ float64 finger_finger_tip"""
     """
     try:
       _x = self
-      buff.write(_get_struct_4f3d().pack(_x.joint1, _x.joint2, _x.joint3, _x.joint4, _x.arm_palm, _x.palm_finger, _x.finger_finger_tip))
+      buff.write(_get_struct_5f().pack(_x.joint1, _x.joint2, _x.joint3, _x.joint4, _x.arm_palm))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -118,8 +110,8 @@ float64 finger_finger_tip"""
       end = 0
       _x = self
       start = end
-      end += 40
-      (_x.joint1, _x.joint2, _x.joint3, _x.joint4, _x.arm_palm, _x.palm_finger, _x.finger_finger_tip,) = _get_struct_4f3d().unpack(str[start:end])
+      end += 20
+      (_x.joint1, _x.joint2, _x.joint3, _x.joint4, _x.arm_palm,) = _get_struct_5f().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -128,9 +120,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_4f3d = None
-def _get_struct_4f3d():
-    global _struct_4f3d
-    if _struct_4f3d is None:
-        _struct_4f3d = struct.Struct("<4f3d")
-    return _struct_4f3d
+_struct_5f = None
+def _get_struct_5f():
+    global _struct_5f
+    if _struct_5f is None:
+        _struct_5f = struct.Struct("<5f")
+    return _struct_5f

@@ -23,8 +23,6 @@ class jointangles {
       this.joint3 = null;
       this.joint4 = null;
       this.arm_palm = null;
-      this.palm_finger = null;
-      this.finger_finger_tip = null;
     }
     else {
       if (initObj.hasOwnProperty('joint1')) {
@@ -57,18 +55,6 @@ class jointangles {
       else {
         this.arm_palm = 0.0;
       }
-      if (initObj.hasOwnProperty('palm_finger')) {
-        this.palm_finger = initObj.palm_finger
-      }
-      else {
-        this.palm_finger = 0.0;
-      }
-      if (initObj.hasOwnProperty('finger_finger_tip')) {
-        this.finger_finger_tip = initObj.finger_finger_tip
-      }
-      else {
-        this.finger_finger_tip = 0.0;
-      }
     }
   }
 
@@ -83,11 +69,7 @@ class jointangles {
     // Serialize message field [joint4]
     bufferOffset = _serializer.float32(obj.joint4, buffer, bufferOffset);
     // Serialize message field [arm_palm]
-    bufferOffset = _serializer.float64(obj.arm_palm, buffer, bufferOffset);
-    // Serialize message field [palm_finger]
-    bufferOffset = _serializer.float64(obj.palm_finger, buffer, bufferOffset);
-    // Serialize message field [finger_finger_tip]
-    bufferOffset = _serializer.float64(obj.finger_finger_tip, buffer, bufferOffset);
+    bufferOffset = _serializer.float32(obj.arm_palm, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -104,16 +86,12 @@ class jointangles {
     // Deserialize message field [joint4]
     data.joint4 = _deserializer.float32(buffer, bufferOffset);
     // Deserialize message field [arm_palm]
-    data.arm_palm = _deserializer.float64(buffer, bufferOffset);
-    // Deserialize message field [palm_finger]
-    data.palm_finger = _deserializer.float64(buffer, bufferOffset);
-    // Deserialize message field [finger_finger_tip]
-    data.finger_finger_tip = _deserializer.float64(buffer, bufferOffset);
+    data.arm_palm = _deserializer.float32(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 40;
+    return 20;
   }
 
   static datatype() {
@@ -123,7 +101,7 @@ class jointangles {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '6cb4ec54877c89eaedfc2a0339a0dead';
+    return 'fda7246815f2a28291e4b07a8932dde9';
   }
 
   static messageDefinition() {
@@ -133,9 +111,7 @@ class jointangles {
     float32 joint2
     float32 joint3 
     float32 joint4
-    float64 arm_palm
-    float64 palm_finger
-    float64 finger_finger_tip
+    float32 arm_palm
     `;
   }
 
@@ -178,20 +154,6 @@ class jointangles {
     }
     else {
       resolved.arm_palm = 0.0
-    }
-
-    if (msg.palm_finger !== undefined) {
-      resolved.palm_finger = msg.palm_finger;
-    }
-    else {
-      resolved.palm_finger = 0.0
-    }
-
-    if (msg.finger_finger_tip !== undefined) {
-      resolved.finger_finger_tip = msg.finger_finger_tip;
-    }
-    else {
-      resolved.finger_finger_tip = 0.0
     }
 
     return resolved;

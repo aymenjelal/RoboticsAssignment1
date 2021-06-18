@@ -20,31 +20,31 @@
 
 (defclass arm_gazebo::ikRequest
   :super ros::object
-  :slots (_joint_positions _positions ))
+  :slots (_joint_positions _actuator_pose ))
 
 (defmethod arm_gazebo::ikRequest
   (:init
    (&key
     ((:joint_positions __joint_positions) (make-array 0 :initial-element 0.0 :element-type :float))
-    ((:positions __positions) (make-array 0 :initial-element 0.0 :element-type :float))
+    ((:actuator_pose __actuator_pose) (make-array 0 :initial-element 0.0 :element-type :float))
     )
    (send-super :init)
    (setq _joint_positions __joint_positions)
-   (setq _positions __positions)
+   (setq _actuator_pose __actuator_pose)
    self)
   (:joint_positions
    (&optional __joint_positions)
    (if __joint_positions (setq _joint_positions __joint_positions)) _joint_positions)
-  (:positions
-   (&optional __positions)
-   (if __positions (setq _positions __positions)) _positions)
+  (:actuator_pose
+   (&optional __actuator_pose)
+   (if __actuator_pose (setq _actuator_pose __actuator_pose)) _actuator_pose)
   (:serialization-length
    ()
    (+
     ;; float64[] _joint_positions
     (* 8    (length _joint_positions)) 4
-    ;; float64[] _positions
-    (* 8    (length _positions)) 4
+    ;; float64[] _actuator_pose
+    (* 8    (length _actuator_pose)) 4
     ))
   (:serialize
    (&optional strm)
@@ -55,10 +55,10 @@
      (dotimes (i (length _joint_positions))
        (sys::poke (elt _joint_positions i) (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
        )
-     ;; float64[] _positions
-     (write-long (length _positions) s)
-     (dotimes (i (length _positions))
-       (sys::poke (elt _positions i) (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
+     ;; float64[] _actuator_pose
+     (write-long (length _actuator_pose) s)
+     (dotimes (i (length _actuator_pose))
+       (sys::poke (elt _actuator_pose i) (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
        )
      ;;
      (if (null strm) (get-output-stream-string s))))
@@ -71,12 +71,12 @@
      (dotimes (i n)
      (setf (elt _joint_positions i) (sys::peek buf ptr- :double)) (incf ptr- 8)
      ))
-   ;; float64[] _positions
+   ;; float64[] _actuator_pose
    (let (n)
      (setq n (sys::peek buf ptr- :integer)) (incf ptr- 4)
-     (setq _positions (instantiate float-vector n))
+     (setq _actuator_pose (instantiate float-vector n))
      (dotimes (i n)
-     (setf (elt _positions i) (sys::peek buf ptr- :double)) (incf ptr- 8)
+     (setf (elt _actuator_pose i) (sys::peek buf ptr- :double)) (incf ptr- 8)
      ))
    ;;
    self)
@@ -131,7 +131,7 @@
   :super ros::object
   :slots ())
 
-(setf (get arm_gazebo::ik :md5sum-) "190b0d670a41214f1bd75146734182d2")
+(setf (get arm_gazebo::ik :md5sum-) "dbd2ec6e346a15ab820fca22b064b6fe")
 (setf (get arm_gazebo::ik :datatype-) "arm_gazebo/ik")
 (setf (get arm_gazebo::ik :request) arm_gazebo::ikRequest)
 (setf (get arm_gazebo::ik :response) arm_gazebo::ikResponse)
@@ -139,26 +139,26 @@
 (defmethod arm_gazebo::ikRequest
   (:response () (instance arm_gazebo::ikResponse :init)))
 
-(setf (get arm_gazebo::ikRequest :md5sum-) "190b0d670a41214f1bd75146734182d2")
+(setf (get arm_gazebo::ikRequest :md5sum-) "dbd2ec6e346a15ab820fca22b064b6fe")
 (setf (get arm_gazebo::ikRequest :datatype-) "arm_gazebo/ikRequest")
 (setf (get arm_gazebo::ikRequest :definition-)
       "float64[] joint_positions
-float64[] positions
+float64[] actuator_pose
 ---
 float64[] target_positions
 ")
 
-(setf (get arm_gazebo::ikResponse :md5sum-) "190b0d670a41214f1bd75146734182d2")
+(setf (get arm_gazebo::ikResponse :md5sum-) "dbd2ec6e346a15ab820fca22b064b6fe")
 (setf (get arm_gazebo::ikResponse :datatype-) "arm_gazebo/ikResponse")
 (setf (get arm_gazebo::ikResponse :definition-)
       "float64[] joint_positions
-float64[] positions
+float64[] actuator_pose
 ---
 float64[] target_positions
 ")
 
 
 
-(provide :arm_gazebo/ik "190b0d670a41214f1bd75146734182d2")
+(provide :arm_gazebo/ik "dbd2ec6e346a15ab820fca22b064b6fe")
 
 

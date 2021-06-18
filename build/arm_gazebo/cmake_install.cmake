@@ -38,7 +38,11 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm_gazebo/msg" TYPE FILE FILES "/home/aymen/Documents/arm_ws/src/arm_gazebo/msg/jointangles.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm_gazebo/msg" TYPE FILE FILES
+    "/home/aymen/Documents/arm_ws/src/arm_gazebo/msg/jointangles.msg"
+    "/home/aymen/Documents/arm_ws/src/arm_gazebo/msg/endpositions.msg"
+    "/home/aymen/Documents/arm_ws/src/arm_gazebo/msg/endeffectorcommand.msg"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

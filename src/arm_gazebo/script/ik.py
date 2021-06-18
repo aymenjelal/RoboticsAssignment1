@@ -1,10 +1,11 @@
+#!/usr/bin/env python3
 import rospy
 import numpy as np
 import math
-import tinyik as ik 
-import arm_gazebo.srv import ik, ikResponse
+import tinyik as tk 
+from arm_gazebo.srv import ik, ikResponse
 
-arm = ik.Actuator([
+arm = tk.Actuator([
     'z',[0,0,0.15],
     'x', [ 0, 0 , 2.0],
     'x',[0, 0 ,1],
@@ -14,8 +15,15 @@ arm = ik.Actuator([
 
 
 def ik_handler(req): 
+    print(f"Received Positions: {req.actuator_pose}")
+    print(f"Received Angles {req.joint_positions}")
+
+    print("Returning IK")
+
     arm.angles = req.joint_positions
     arm.ee = req.actuator_pose
+
+    print (arm.angles)
 
     return ikResponse(arm.angles)
 

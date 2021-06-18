@@ -14,7 +14,7 @@
 
 (defclass arm_gazebo::jointangles
   :super ros::object
-  :slots (_joint1 _joint2 _joint3 _joint4 _arm_palm _palm_finger _finger_finger_tip ))
+  :slots (_joint1 _joint2 _joint3 _joint4 _arm_palm ))
 
 (defmethod arm_gazebo::jointangles
   (:init
@@ -24,8 +24,6 @@
     ((:joint3 __joint3) 0.0)
     ((:joint4 __joint4) 0.0)
     ((:arm_palm __arm_palm) 0.0)
-    ((:palm_finger __palm_finger) 0.0)
-    ((:finger_finger_tip __finger_finger_tip) 0.0)
     )
    (send-super :init)
    (setq _joint1 (float __joint1))
@@ -33,8 +31,6 @@
    (setq _joint3 (float __joint3))
    (setq _joint4 (float __joint4))
    (setq _arm_palm (float __arm_palm))
-   (setq _palm_finger (float __palm_finger))
-   (setq _finger_finger_tip (float __finger_finger_tip))
    self)
   (:joint1
    (&optional __joint1)
@@ -51,12 +47,6 @@
   (:arm_palm
    (&optional __arm_palm)
    (if __arm_palm (setq _arm_palm __arm_palm)) _arm_palm)
-  (:palm_finger
-   (&optional __palm_finger)
-   (if __palm_finger (setq _palm_finger __palm_finger)) _palm_finger)
-  (:finger_finger_tip
-   (&optional __finger_finger_tip)
-   (if __finger_finger_tip (setq _finger_finger_tip __finger_finger_tip)) _finger_finger_tip)
   (:serialization-length
    ()
    (+
@@ -68,12 +58,8 @@
     4
     ;; float32 _joint4
     4
-    ;; float64 _arm_palm
-    8
-    ;; float64 _palm_finger
-    8
-    ;; float64 _finger_finger_tip
-    8
+    ;; float32 _arm_palm
+    4
     ))
   (:serialize
    (&optional strm)
@@ -87,12 +73,8 @@
        (sys::poke _joint3 (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
      ;; float32 _joint4
        (sys::poke _joint4 (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
-     ;; float64 _arm_palm
-       (sys::poke _arm_palm (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
-     ;; float64 _palm_finger
-       (sys::poke _palm_finger (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
-     ;; float64 _finger_finger_tip
-       (sys::poke _finger_finger_tip (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
+     ;; float32 _arm_palm
+       (sys::poke _arm_palm (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
@@ -105,30 +87,24 @@
      (setq _joint3 (sys::peek buf ptr- :float)) (incf ptr- 4)
    ;; float32 _joint4
      (setq _joint4 (sys::peek buf ptr- :float)) (incf ptr- 4)
-   ;; float64 _arm_palm
-     (setq _arm_palm (sys::peek buf ptr- :double)) (incf ptr- 8)
-   ;; float64 _palm_finger
-     (setq _palm_finger (sys::peek buf ptr- :double)) (incf ptr- 8)
-   ;; float64 _finger_finger_tip
-     (setq _finger_finger_tip (sys::peek buf ptr- :double)) (incf ptr- 8)
+   ;; float32 _arm_palm
+     (setq _arm_palm (sys::peek buf ptr- :float)) (incf ptr- 4)
    ;;
    self)
   )
 
-(setf (get arm_gazebo::jointangles :md5sum-) "6cb4ec54877c89eaedfc2a0339a0dead")
+(setf (get arm_gazebo::jointangles :md5sum-) "fda7246815f2a28291e4b07a8932dde9")
 (setf (get arm_gazebo::jointangles :datatype-) "arm_gazebo/jointangles")
 (setf (get arm_gazebo::jointangles :definition-)
       "float32 joint1
 float32 joint2
 float32 joint3 
 float32 joint4
-float64 arm_palm
-float64 palm_finger
-float64 finger_finger_tip
+float32 arm_palm
 ")
 
 
 
-(provide :arm_gazebo/jointangles "6cb4ec54877c89eaedfc2a0339a0dead")
+(provide :arm_gazebo/jointangles "fda7246815f2a28291e4b07a8932dde9")
 
 

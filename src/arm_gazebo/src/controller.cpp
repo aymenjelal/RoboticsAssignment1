@@ -4,7 +4,8 @@
 #include <gazebo/common/common.hh>
 #include <ignition/math/Vector3.hh>
 #include <iostream>
-#include "arm_gazebo/jointangles.h" 
+#include "arm_gazebo/jointangles.h"
+#include "arm_gazebo/endpositions.h"
 #include "ros/ros.h"
 #include "arm_gazebo/fk.h"
 #include "arm_gazebo/ik.h"
@@ -32,12 +33,34 @@ namespace gazebo
 			this->jointController->SetPositionTarget(jointname4,  msg->joint4);
 			this->jointController->SetPositionTarget(jointname5,  msg->arm_palm);
 			
-
-			this->catch_object(msg);
-			
 		}
 		void getPositionsCallback(const arm_gazebo::endpositions::ConstPtr& msg){
+			
+			ROS_INFO("Received %f %f %f", msg->x, msg->y, msg->z);
+                arm_gazebo::ik srv;
+			ROS_INFO("after service");
+                srv.request.joint_positions = {0, 0, 0, 0, 0, 0};
+				srv.request.actuator_pose = {msg->x, msg->y, msg->z};
+                
+				for (int i = 0; i < 4; i++)
+				{
+					srv.request.joint_positions[i] = physics::JointState(jointList[i]).Position(0);
+				}
 
+				ROS_INFO("Received %f %f %f", msg->x, msg->y, msg->z);
+
+                if (ikClient.call(srv))
+                {
+					ROS_INFO("Ik: [%f, %f, %f, %f]", 
+					srv.response.target_positions[0], srv.response.target_positions[1], srv.response.target_positions[2], srv.response.target_positions[3]);
+                    for (int i = 0; i < 4; i++)
+                    {
+                        jointController->SetPositionTarget(jointList[i]->GetScopedName(), srv.response.target_positions[i]);
+                    }  
+
+                }
+
+            
 		}
 		
 		void Load(physics::ModelPtr _parent, sdf::ElementPtr /*_sdf*/)
@@ -47,9 +70,11 @@ namespace gazebo
 
 			// // intiantiate the joint controller
 			this->jointController = this->model->GetJointController();
-
+			this->jointList = model->GetJoints();
+			this->updateConnection = event::Events::ConnectWorldUpdateBegin(
+				std::bind(&ModelPush::OnUpdate, this));
 			// // set your PID values
-			this->pid = common::PID(100, 30, 40);
+			this->pid = common::PID(60, 30, 40);
 			this->pid2 = common::PID(100, 30, 40);
 
 			auto joint_name1 = "chasis_arm1_joint";
@@ -74,39 +99,26 @@ namespace gazebo
 			this->jointController->SetPositionPID(this->model->GetJoint(joint_name8)->GetScopedName(), pid2);
 			this->jointController->SetPositionPID(this->model->GetJoint(joint_name9)->GetScopedName(), pid2);
 
+			for (int i = 4; i < 9; i++)
+			{
+				jointController->SetPositionTarget(jointList[i]->GetScopedName(), 0);
+			}  
 			int argc = 0;
             char **argv = nullptr;
 			ros::init(argc,argv,"angle_listener");
 
 			ros::NodeHandle n;
 			//this->pub =n.advertise<arm_gazebo::jointangles>("pubangle_topic", 1000);
-			this->sub = n.subscribe("angle_topic",1000, &ModelPush::setangles,this);
+			this->sub = n.subscribe("angle_topic",1000, &ModelPush::getPositionsCallback,this);
 		
-
+			fkClient = n.serviceClient<arm_gazebo::fk>("fk");
+			ikClient = n.serviceClient<arm_gazebo::ik>("ik");
 			// Listen to the update event. This event is broadcast every
 			// simulation iteration.
-			this->updateConnection = event::Events::ConnectWorldUpdateBegin(
-				std::bind(&ModelPush::OnUpdate, this));
+			ros::spinOnce();
+	
 		}
 
-		void catch_object(const arm_gazebo::jointangles::ConstPtr& msg){
-                //get joints
-                std::string left_finger_left_finger_tip = this->model->GetJoint("left_finger_left_finger_tip_joint")->GetScopedName();
-                std::string right_finger_right_finger_tip = this->model->GetJoint("right_finger_right_finger_tip_joint")->GetScopedName();
-
-                this->jointController->SetPositionPID(left_finger_left_finger_tip, common::PID(30.1, 10.01, 10.03));
-                this->jointController->SetPositionPID(right_finger_right_finger_tip, common::PID(30.1, 10.01, 10.03));
-
-                //angle value to be changed
-                double angle = (msg->finger_finger_tip);
-                double negative_angle = -1*angle;
-                //set joint angles
-                
-                this->jointController->SetPositionTarget(left_finger_left_finger_tip, angle);
-                this->jointController->SetPositionTarget(right_finger_right_finger_tip, negative_angle);
-
-
-            }
 
 		// Called by the world update start event
 	public:
@@ -146,6 +158,7 @@ namespace gazebo
 		// a pointer that points to a model object
 	private:
 		physics::ModelPtr model;
+		physics::Joint_V jointList;
 
 	private: 
 		ros::Publisher pub;

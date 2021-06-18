@@ -25,11 +25,11 @@ struct ikRequest_
 
   ikRequest_()
     : joint_positions()
-    , positions()  {
+    , actuator_pose()  {
     }
   ikRequest_(const ContainerAllocator& _alloc)
     : joint_positions(_alloc)
-    , positions(_alloc)  {
+    , actuator_pose(_alloc)  {
   (void)_alloc;
     }
 
@@ -38,8 +38,8 @@ struct ikRequest_
    typedef std::vector<double, typename ContainerAllocator::template rebind<double>::other >  _joint_positions_type;
   _joint_positions_type joint_positions;
 
-   typedef std::vector<double, typename ContainerAllocator::template rebind<double>::other >  _positions_type;
-  _positions_type positions;
+   typedef std::vector<double, typename ContainerAllocator::template rebind<double>::other >  _actuator_pose_type;
+  _actuator_pose_type actuator_pose;
 
 
 
@@ -71,7 +71,7 @@ template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::arm_gazebo::ikRequest_<ContainerAllocator1> & lhs, const ::arm_gazebo::ikRequest_<ContainerAllocator2> & rhs)
 {
   return lhs.joint_positions == rhs.joint_positions &&
-    lhs.positions == rhs.positions;
+    lhs.actuator_pose == rhs.actuator_pose;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -128,12 +128,12 @@ struct MD5Sum< ::arm_gazebo::ikRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "e4853578542f0e3830c6e17da6e042e1";
+    return "db792127185cdcf354b6e7c7086f5a4a";
   }
 
   static const char* value(const ::arm_gazebo::ikRequest_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xe4853578542f0e38ULL;
-  static const uint64_t static_value2 = 0x30c6e17da6e042e1ULL;
+  static const uint64_t static_value1 = 0xdb792127185cdcf3ULL;
+  static const uint64_t static_value2 = 0x54b6e7c7086f5a4aULL;
 };
 
 template<class ContainerAllocator>
@@ -153,7 +153,7 @@ struct Definition< ::arm_gazebo::ikRequest_<ContainerAllocator> >
   static const char* value()
   {
     return "float64[] joint_positions\n"
-"float64[] positions\n"
+"float64[] actuator_pose\n"
 ;
   }
 
@@ -173,7 +173,7 @@ namespace serialization
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
       stream.next(m.joint_positions);
-      stream.next(m.positions);
+      stream.next(m.actuator_pose);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -198,11 +198,11 @@ struct Printer< ::arm_gazebo::ikRequest_<ContainerAllocator> >
       s << indent << "  joint_positions[" << i << "]: ";
       Printer<double>::stream(s, indent + "  ", v.joint_positions[i]);
     }
-    s << indent << "positions[]" << std::endl;
-    for (size_t i = 0; i < v.positions.size(); ++i)
+    s << indent << "actuator_pose[]" << std::endl;
+    for (size_t i = 0; i < v.actuator_pose.size(); ++i)
     {
-      s << indent << "  positions[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.positions[i]);
+      s << indent << "  actuator_pose[" << i << "]: ";
+      Printer<double>::stream(s, indent + "  ", v.actuator_pose[i]);
     }
   }
 };

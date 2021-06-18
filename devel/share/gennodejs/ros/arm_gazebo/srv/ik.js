@@ -22,7 +22,7 @@ class ikRequest {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.joint_positions = null;
-      this.positions = null;
+      this.actuator_pose = null;
     }
     else {
       if (initObj.hasOwnProperty('joint_positions')) {
@@ -31,11 +31,11 @@ class ikRequest {
       else {
         this.joint_positions = [];
       }
-      if (initObj.hasOwnProperty('positions')) {
-        this.positions = initObj.positions
+      if (initObj.hasOwnProperty('actuator_pose')) {
+        this.actuator_pose = initObj.actuator_pose
       }
       else {
-        this.positions = [];
+        this.actuator_pose = [];
       }
     }
   }
@@ -44,8 +44,8 @@ class ikRequest {
     // Serializes a message object of type ikRequest
     // Serialize message field [joint_positions]
     bufferOffset = _arraySerializer.float64(obj.joint_positions, buffer, bufferOffset, null);
-    // Serialize message field [positions]
-    bufferOffset = _arraySerializer.float64(obj.positions, buffer, bufferOffset, null);
+    // Serialize message field [actuator_pose]
+    bufferOffset = _arraySerializer.float64(obj.actuator_pose, buffer, bufferOffset, null);
     return bufferOffset;
   }
 
@@ -55,15 +55,15 @@ class ikRequest {
     let data = new ikRequest(null);
     // Deserialize message field [joint_positions]
     data.joint_positions = _arrayDeserializer.float64(buffer, bufferOffset, null)
-    // Deserialize message field [positions]
-    data.positions = _arrayDeserializer.float64(buffer, bufferOffset, null)
+    // Deserialize message field [actuator_pose]
+    data.actuator_pose = _arrayDeserializer.float64(buffer, bufferOffset, null)
     return data;
   }
 
   static getMessageSize(object) {
     let length = 0;
     length += 8 * object.joint_positions.length;
-    length += 8 * object.positions.length;
+    length += 8 * object.actuator_pose.length;
     return length + 8;
   }
 
@@ -74,14 +74,14 @@ class ikRequest {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'e4853578542f0e3830c6e17da6e042e1';
+    return 'db792127185cdcf354b6e7c7086f5a4a';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
     float64[] joint_positions
-    float64[] positions
+    float64[] actuator_pose
     
     `;
   }
@@ -99,11 +99,11 @@ class ikRequest {
       resolved.joint_positions = []
     }
 
-    if (msg.positions !== undefined) {
-      resolved.positions = msg.positions;
+    if (msg.actuator_pose !== undefined) {
+      resolved.actuator_pose = msg.actuator_pose;
     }
     else {
-      resolved.positions = []
+      resolved.actuator_pose = []
     }
 
     return resolved;
@@ -186,6 +186,6 @@ class ikResponse {
 module.exports = {
   Request: ikRequest,
   Response: ikResponse,
-  md5sum() { return '190b0d670a41214f1bd75146734182d2'; },
+  md5sum() { return 'dbd2ec6e346a15ab820fca22b064b6fe'; },
   datatype() { return 'arm_gazebo/ik'; }
 };

@@ -5,6 +5,31 @@
 3. fk and ik services added 
 4. old controller edited to include ik 
 
+5. To run 
+
+## Move to the box 
+
+rostopic pub --once /angle_topic arm_gazebo/endpositions "x: 0.0
+y: -2.5
+z: 0.4" 
+
+## catch the box 
+rostopic pub --once /command_topic arm_gazebo/endeffectorcommand catch
+
+## release the box 
+rostopic pub --once /command_topic arm_gazebo/endeffectorcommand  release
+
+## move the box to a new location 
+rostopic pub --once /angle_topic arm_gazebo/endpositions "x: 1.4
+y: -1.7
+z: 0.7" 
+
+## move to the initial position 
+rostopic pub --once /angle_topic arm_gazebo/endpositions "x: 0.0
+y: -2.5
+z: 0.4" 
+
+
 ## Robotics Assignment
 
 Question 1 is in the src/question1 

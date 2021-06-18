@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/aymen/Documents/arm_ws/src/arm_gazebo/msg/jointangles.msg"
+messages_str = "/home/aymen/Documents/arm_ws/src/arm_gazebo/msg/jointangles.msg;/home/aymen/Documents/arm_ws/src/arm_gazebo/msg/endpositions.msg;/home/aymen/Documents/arm_ws/src/arm_gazebo/msg/endeffectorcommand.msg"
 services_str = "/home/aymen/Documents/arm_ws/src/arm_gazebo/srv/fk.srv;/home/aymen/Documents/arm_ws/src/arm_gazebo/srv/ik.srv"
 pkg_name = "arm_gazebo"
 dependencies_str = "std_msgs"

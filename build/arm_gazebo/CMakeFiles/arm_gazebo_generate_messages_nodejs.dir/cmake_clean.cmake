@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "/home/aymen/Documents/arm_ws/devel/share/gennodejs/ros/arm_gazebo/msg/endeffectorcommand.js"
+  "/home/aymen/Documents/arm_ws/devel/share/gennodejs/ros/arm_gazebo/msg/endpositions.js"
   "/home/aymen/Documents/arm_ws/devel/share/gennodejs/ros/arm_gazebo/msg/jointangles.js"
   "/home/aymen/Documents/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv/fk.js"
   "/home/aymen/Documents/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv/ik.js"

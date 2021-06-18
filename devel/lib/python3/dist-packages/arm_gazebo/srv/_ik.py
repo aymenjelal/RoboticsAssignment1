@@ -8,13 +8,13 @@ import struct
 
 
 class ikRequest(genpy.Message):
-  _md5sum = "e4853578542f0e3830c6e17da6e042e1"
+  _md5sum = "db792127185cdcf354b6e7c7086f5a4a"
   _type = "arm_gazebo/ikRequest"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """float64[] joint_positions
-float64[] positions
+float64[] actuator_pose
 """
-  __slots__ = ['joint_positions','positions']
+  __slots__ = ['joint_positions','actuator_pose']
   _slot_types = ['float64[]','float64[]']
 
   def __init__(self, *args, **kwds):
@@ -25,7 +25,7 @@ float64[] positions
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       joint_positions,positions
+       joint_positions,actuator_pose
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -36,11 +36,11 @@ float64[] positions
       # message fields cannot be None, assign default values for those that are
       if self.joint_positions is None:
         self.joint_positions = []
-      if self.positions is None:
-        self.positions = []
+      if self.actuator_pose is None:
+        self.actuator_pose = []
     else:
       self.joint_positions = []
-      self.positions = []
+      self.actuator_pose = []
 
   def _get_types(self):
     """
@@ -58,10 +58,10 @@ float64[] positions
       buff.write(_struct_I.pack(length))
       pattern = '<%sd'%length
       buff.write(struct.Struct(pattern).pack(*self.joint_positions))
-      length = len(self.positions)
+      length = len(self.actuator_pose)
       buff.write(_struct_I.pack(length))
       pattern = '<%sd'%length
-      buff.write(struct.Struct(pattern).pack(*self.positions))
+      buff.write(struct.Struct(pattern).pack(*self.actuator_pose))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -88,7 +88,7 @@ float64[] positions
       start = end
       s = struct.Struct(pattern)
       end += s.size
-      self.positions = s.unpack(str[start:end])
+      self.actuator_pose = s.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -105,10 +105,10 @@ float64[] positions
       buff.write(_struct_I.pack(length))
       pattern = '<%sd'%length
       buff.write(self.joint_positions.tostring())
-      length = len(self.positions)
+      length = len(self.actuator_pose)
       buff.write(_struct_I.pack(length))
       pattern = '<%sd'%length
-      buff.write(self.positions.tostring())
+      buff.write(self.actuator_pose.tostring())
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -136,7 +136,7 @@ float64[] positions
       start = end
       s = struct.Struct(pattern)
       end += s.size
-      self.positions = numpy.frombuffer(str[start:end], dtype=numpy.float64, count=length)
+      self.actuator_pose = numpy.frombuffer(str[start:end], dtype=numpy.float64, count=length)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -266,6 +266,6 @@ def _get_struct_I():
     return _struct_I
 class ik(object):
   _type          = 'arm_gazebo/ik'
-  _md5sum = '190b0d670a41214f1bd75146734182d2'
+  _md5sum = 'dbd2ec6e346a15ab820fca22b064b6fe'
   _request_class  = ikRequest
   _response_class = ikResponse

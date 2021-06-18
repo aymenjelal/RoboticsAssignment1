@@ -54,6 +54,8 @@ CMAKE_BINARY_DIR = /home/aymen/Documents/arm_ws/build
 include arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py.dir/progress.make
 
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py: /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_jointangles.py
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py: /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_endpositions.py
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py: /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_endeffectorcommand.py
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py: /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_fk.py
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py: /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_ik.py
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py: /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/__init__.py
@@ -65,32 +67,48 @@ arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py: /home/aymen/Documents/arm
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG arm_gazebo/jointangles"
 	cd /home/aymen/Documents/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/aymen/Documents/arm_ws/src/arm_gazebo/msg/jointangles.msg -Iarm_gazebo:/home/aymen/Documents/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg
 
+/home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_endpositions.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_endpositions.py: /home/aymen/Documents/arm_ws/src/arm_gazebo/msg/endpositions.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG arm_gazebo/endpositions"
+	cd /home/aymen/Documents/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/aymen/Documents/arm_ws/src/arm_gazebo/msg/endpositions.msg -Iarm_gazebo:/home/aymen/Documents/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg
+
+/home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_endeffectorcommand.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_endeffectorcommand.py: /home/aymen/Documents/arm_ws/src/arm_gazebo/msg/endeffectorcommand.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG arm_gazebo/endeffectorcommand"
+	cd /home/aymen/Documents/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/aymen/Documents/arm_ws/src/arm_gazebo/msg/endeffectorcommand.msg -Iarm_gazebo:/home/aymen/Documents/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg
+
 /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_fk.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
 /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_fk.py: /home/aymen/Documents/arm_ws/src/arm_gazebo/srv/fk.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV arm_gazebo/fk"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python code from SRV arm_gazebo/fk"
 	cd /home/aymen/Documents/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/aymen/Documents/arm_ws/src/arm_gazebo/srv/fk.srv -Iarm_gazebo:/home/aymen/Documents/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv
 
 /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_ik.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
 /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_ik.py: /home/aymen/Documents/arm_ws/src/arm_gazebo/srv/ik.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV arm_gazebo/ik"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python code from SRV arm_gazebo/ik"
 	cd /home/aymen/Documents/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/aymen/Documents/arm_ws/src/arm_gazebo/srv/ik.srv -Iarm_gazebo:/home/aymen/Documents/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv
 
 /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/__init__.py: /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_jointangles.py
+/home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/__init__.py: /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_endpositions.py
+/home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/__init__.py: /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_endeffectorcommand.py
 /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/__init__.py: /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_fk.py
 /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/__init__.py: /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_ik.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for arm_gazebo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python msg __init__.py for arm_gazebo"
 	cd /home/aymen/Documents/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg --initpy
 
 /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/__init__.py: /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_jointangles.py
+/home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/__init__.py: /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_endpositions.py
+/home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/__init__.py: /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_endeffectorcommand.py
 /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/__init__.py: /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_fk.py
 /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/__init__.py: /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_ik.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python srv __init__.py for arm_gazebo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Python srv __init__.py for arm_gazebo"
 	cd /home/aymen/Documents/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv --initpy
 
 arm_gazebo_generate_messages_py: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py
 arm_gazebo_generate_messages_py: /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_jointangles.py
+arm_gazebo_generate_messages_py: /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_endpositions.py
+arm_gazebo_generate_messages_py: /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_endeffectorcommand.py
 arm_gazebo_generate_messages_py: /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_fk.py
 arm_gazebo_generate_messages_py: /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_ik.py
 arm_gazebo_generate_messages_py: /home/aymen/Documents/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/__init__.py

@@ -106,6 +106,7 @@ arm_description/clean: arm_description/CMakeFiles/_catkin_empty_exported_target.
 # Directory level rules for directory arm_gazebo
 
 # Recursive "all" directory target.
+arm_gazebo/all: arm_gazebo/CMakeFiles/endeffectorcontroller.dir/all
 arm_gazebo/all: arm_gazebo/CMakeFiles/arm_gazebo.dir/all
 arm_gazebo/all: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages.dir/all
 
@@ -124,9 +125,9 @@ arm_gazebo/clean: arm_gazebo/CMakeFiles/arm_gazebo_genlisp.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_lisp.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/arm_gazebo_geneus.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/clean
+arm_gazebo/clean: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/actionlib_generate_messages_nodejs.dir/clean
-arm_gazebo/clean: arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_py.dir/clean
@@ -138,17 +139,22 @@ arm_gazebo/clean: arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/cl
 arm_gazebo/clean: arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/tf_generate_messages_cpp.dir/clean
-arm_gazebo/clean: arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+arm_gazebo/clean: arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/clean
+arm_gazebo/clean: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endeffectorcommand.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+arm_gazebo/clean: arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+arm_gazebo/clean: arm_gazebo/CMakeFiles/endeffectorcontroller.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/tf_generate_messages_eus.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_py.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/gazebo_ros_gencfg.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/tf_generate_messages_lisp.dir/clean
-arm_gazebo/clean: arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/clean
+arm_gazebo/clean: arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/clean
+arm_gazebo/clean: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/clean
+arm_gazebo/clean: arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/actionlib_generate_messages_py.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/clean
@@ -159,7 +165,6 @@ arm_gazebo/clean: arm_gazebo/CMakeFiles/std_srvs_generate_messages_lisp.dir/clea
 arm_gazebo/clean: arm_gazebo/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/arm_gazebo.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/std_srvs_generate_messages_py.dir/clean
-arm_gazebo/clean: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_eus.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/clean
@@ -179,11 +184,10 @@ arm_gazebo/clean: arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_py.dir
 arm_gazebo/clean: arm_gazebo/CMakeFiles/actionlib_generate_messages_cpp.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_jointangles.dir/clean
+arm_gazebo/clean: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endpositions.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/clean
 arm_gazebo/clean: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_fk.dir/clean
-arm_gazebo/clean: arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
-arm_gazebo/clean: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/clean
 
 .PHONY : arm_gazebo/clean
 
@@ -453,7 +457,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googlemock/CMakeFiles/gmoc
 gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=23,24 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=35,36 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -480,7 +484,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
 gtest/googlemock/CMakeFiles/gmock.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=21,22 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=33,34 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -507,7 +511,7 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googletest/CMakeFiles/gtest_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=27,28 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=39,40 "Built target gtest_main"
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -534,7 +538,7 @@ gtest/googletest/CMakeFiles/gtest_main.dir/clean:
 gtest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=25,26 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=37,38 "Built target gtest"
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -993,7 +997,7 @@ arm_lib/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
 question1/CMakeFiles/listener.dir/all: question1/CMakeFiles/question1_generate_messages_cpp.dir/all
 	$(MAKE) -f question1/CMakeFiles/listener.dir/build.make question1/CMakeFiles/listener.dir/depend
 	$(MAKE) -f question1/CMakeFiles/listener.dir/build.make question1/CMakeFiles/listener.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=29,30 "Built target listener"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=41,42 "Built target listener"
 .PHONY : question1/CMakeFiles/listener.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1020,7 +1024,7 @@ question1/CMakeFiles/listener.dir/clean:
 question1/CMakeFiles/talker.dir/all: question1/CMakeFiles/question1_generate_messages_cpp.dir/all
 	$(MAKE) -f question1/CMakeFiles/talker.dir/build.make question1/CMakeFiles/talker.dir/depend
 	$(MAKE) -f question1/CMakeFiles/talker.dir/build.make question1/CMakeFiles/talker.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=43,44 "Built target talker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=55,56 "Built target talker"
 .PHONY : question1/CMakeFiles/talker.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1076,7 +1080,7 @@ question1/CMakeFiles/question1_generate_messages_lisp.dir/all: question1/CMakeFi
 question1/CMakeFiles/question1_generate_messages_lisp.dir/all: question1/CMakeFiles/_question1_generate_messages_check_deps_output.dir/all
 	$(MAKE) -f question1/CMakeFiles/question1_generate_messages_lisp.dir/build.make question1/CMakeFiles/question1_generate_messages_lisp.dir/depend
 	$(MAKE) -f question1/CMakeFiles/question1_generate_messages_lisp.dir/build.make question1/CMakeFiles/question1_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=36,37 "Built target question1_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=48,49 "Built target question1_generate_messages_lisp"
 .PHONY : question1/CMakeFiles/question1_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1163,7 +1167,7 @@ question1/CMakeFiles/question1_generate_messages_cpp.dir/all: question1/CMakeFil
 question1/CMakeFiles/question1_generate_messages_cpp.dir/all: question1/CMakeFiles/_question1_generate_messages_check_deps_output.dir/all
 	$(MAKE) -f question1/CMakeFiles/question1_generate_messages_cpp.dir/build.make question1/CMakeFiles/question1_generate_messages_cpp.dir/depend
 	$(MAKE) -f question1/CMakeFiles/question1_generate_messages_cpp.dir/build.make question1/CMakeFiles/question1_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=31,32 "Built target question1_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=43,44 "Built target question1_generate_messages_cpp"
 .PHONY : question1/CMakeFiles/question1_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1219,7 +1223,7 @@ question1/CMakeFiles/question1_generate_messages_eus.dir/all: question1/CMakeFil
 question1/CMakeFiles/question1_generate_messages_eus.dir/all: question1/CMakeFiles/_question1_generate_messages_check_deps_output.dir/all
 	$(MAKE) -f question1/CMakeFiles/question1_generate_messages_eus.dir/build.make question1/CMakeFiles/question1_generate_messages_eus.dir/depend
 	$(MAKE) -f question1/CMakeFiles/question1_generate_messages_eus.dir/build.make question1/CMakeFiles/question1_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=33,34,35 "Built target question1_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=45,46,47 "Built target question1_generate_messages_eus"
 .PHONY : question1/CMakeFiles/question1_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1302,7 +1306,7 @@ question1/CMakeFiles/question1_generate_messages_nodejs.dir/all: question1/CMake
 question1/CMakeFiles/question1_generate_messages_nodejs.dir/all: question1/CMakeFiles/_question1_generate_messages_check_deps_output.dir/all
 	$(MAKE) -f question1/CMakeFiles/question1_generate_messages_nodejs.dir/build.make question1/CMakeFiles/question1_generate_messages_nodejs.dir/depend
 	$(MAKE) -f question1/CMakeFiles/question1_generate_messages_nodejs.dir/build.make question1/CMakeFiles/question1_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=38,39 "Built target question1_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=50,51 "Built target question1_generate_messages_nodejs"
 .PHONY : question1/CMakeFiles/question1_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1358,7 +1362,7 @@ question1/CMakeFiles/question1_generate_messages_py.dir/all: question1/CMakeFile
 question1/CMakeFiles/question1_generate_messages_py.dir/all: question1/CMakeFiles/_question1_generate_messages_check_deps_output.dir/all
 	$(MAKE) -f question1/CMakeFiles/question1_generate_messages_py.dir/build.make question1/CMakeFiles/question1_generate_messages_py.dir/depend
 	$(MAKE) -f question1/CMakeFiles/question1_generate_messages_py.dir/build.make question1/CMakeFiles/question1_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=40,41,42 "Built target question1_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=52,53,54 "Built target question1_generate_messages_py"
 .PHONY : question1/CMakeFiles/question1_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1417,7 +1421,7 @@ arm_gazebo/CMakeFiles/arm_gazebo_genpy.dir/all: arm_gazebo/CMakeFiles/arm_gazebo
 
 # Build rule for subdir invocation for target.
 arm_gazebo/CMakeFiles/arm_gazebo_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/arm_gazebo_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
 .PHONY : arm_gazebo/CMakeFiles/arm_gazebo_genpy.dir/rule
@@ -1444,7 +1448,7 @@ arm_gazebo/CMakeFiles/arm_gazebo_gennodejs.dir/all: arm_gazebo/CMakeFiles/arm_ga
 
 # Build rule for subdir invocation for target.
 arm_gazebo/CMakeFiles/arm_gazebo_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/arm_gazebo_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
 .PHONY : arm_gazebo/CMakeFiles/arm_gazebo_gennodejs.dir/rule
@@ -1464,17 +1468,19 @@ arm_gazebo/CMakeFiles/arm_gazebo_gennodejs.dir/clean:
 
 # All Build rule for target.
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs.dir/all: arm_lib/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_jointangles.dir/all
-arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_fk.dir/all
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endeffectorcommand.dir/all
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/all
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_jointangles.dir/all
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endpositions.dir/all
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_fk.dir/all
 	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs.dir/depend
 	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=13,14,15 "Built target arm_gazebo_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=19,20,21,22,23 "Built target arm_gazebo_generate_messages_nodejs"
 .PHONY : arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
 .PHONY : arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs.dir/rule
@@ -1501,7 +1507,7 @@ arm_gazebo/CMakeFiles/arm_gazebo_genlisp.dir/all: arm_gazebo/CMakeFiles/arm_gaze
 
 # Build rule for subdir invocation for target.
 arm_gazebo/CMakeFiles/arm_gazebo_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/arm_gazebo_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
 .PHONY : arm_gazebo/CMakeFiles/arm_gazebo_genlisp.dir/rule
@@ -1521,17 +1527,19 @@ arm_gazebo/CMakeFiles/arm_gazebo_genlisp.dir/clean:
 
 # All Build rule for target.
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_lisp.dir/all: arm_lib/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_lisp.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_jointangles.dir/all
-arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_lisp.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_fk.dir/all
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_lisp.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endeffectorcommand.dir/all
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_lisp.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/all
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_lisp.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_jointangles.dir/all
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_lisp.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endpositions.dir/all
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_lisp.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_fk.dir/all
 	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_lisp.dir/depend
 	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=10,11,12 "Built target arm_gazebo_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=14,15,16,17,18 "Built target arm_gazebo_generate_messages_lisp"
 .PHONY : arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
 .PHONY : arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_lisp.dir/rule
@@ -1558,7 +1566,7 @@ arm_gazebo/CMakeFiles/arm_gazebo_geneus.dir/all: arm_gazebo/CMakeFiles/arm_gazeb
 
 # Build rule for subdir invocation for target.
 arm_gazebo/CMakeFiles/arm_gazebo_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/arm_gazebo_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
 .PHONY : arm_gazebo/CMakeFiles/arm_gazebo_geneus.dir/rule
@@ -1578,17 +1586,19 @@ arm_gazebo/CMakeFiles/arm_gazebo_geneus.dir/clean:
 
 # All Build rule for target.
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/all: arm_lib/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_jointangles.dir/all
-arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_fk.dir/all
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endeffectorcommand.dir/all
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/all
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_jointangles.dir/all
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endpositions.dir/all
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_fk.dir/all
 	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/depend
 	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=6,7,8,9 "Built target arm_gazebo_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=8,9,10,11,12,13 "Built target arm_gazebo_generate_messages_eus"
 .PHONY : arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
 .PHONY : arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/rule
@@ -1602,6 +1612,38 @@ arm_gazebo_generate_messages_eus: arm_gazebo/CMakeFiles/arm_gazebo_generate_mess
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/clean:
 	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/clean
 .PHONY : arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir
+
+# All Build rule for target.
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/all: arm_lib/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endeffectorcommand.dir/all
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/all
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_jointangles.dir/all
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endpositions.dir/all
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_fk.dir/all
+	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/depend
+	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=3,4,5,6,7 "Built target arm_gazebo_generate_messages_cpp"
+.PHONY : arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
+.PHONY : arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+arm_gazebo_generate_messages_cpp: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/rule
+
+.PHONY : arm_gazebo_generate_messages_cpp
+
+# clean rule for target.
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/clean:
+	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/clean
+.PHONY : arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/clean
 
 #=============================================================================
 # Target rules for target arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir
@@ -1656,33 +1698,6 @@ actionlib_generate_messages_nodejs: arm_gazebo/CMakeFiles/actionlib_generate_mes
 arm_gazebo/CMakeFiles/actionlib_generate_messages_nodejs.dir/clean:
 	$(MAKE) -f arm_gazebo/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/actionlib_generate_messages_nodejs.dir/clean
 .PHONY : arm_gazebo/CMakeFiles/actionlib_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir
-
-# All Build rule for target.
-arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num= "Built target gazebo_msgs_generate_messages_nodejs"
-.PHONY : arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
-.PHONY : arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-gazebo_msgs_generate_messages_nodejs: arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : gazebo_msgs_generate_messages_nodejs
-
-# clean rule for target.
-arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/clean
-.PHONY : arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/clean
 
 #=============================================================================
 # Target rules for target arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_eus.dir
@@ -1797,17 +1812,19 @@ arm_gazebo/CMakeFiles/actionlib_generate_messages_lisp.dir/clean:
 
 # All Build rule for target.
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py.dir/all: arm_lib/CMakeFiles/std_msgs_generate_messages_py.dir/all
-arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_jointangles.dir/all
-arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_fk.dir/all
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endeffectorcommand.dir/all
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/all
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_jointangles.dir/all
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endpositions.dir/all
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_fk.dir/all
 	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py.dir/depend
 	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=16,17,18,19,20 "Built target arm_gazebo_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=24,25,26,27,28,29,30 "Built target arm_gazebo_generate_messages_py"
 .PHONY : arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
 .PHONY : arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py.dir/rule
@@ -1985,31 +2002,58 @@ arm_gazebo/CMakeFiles/tf_generate_messages_cpp.dir/clean:
 .PHONY : arm_gazebo/CMakeFiles/tf_generate_messages_cpp.dir/clean
 
 #=============================================================================
-# Target rules for target arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir
+# Target rules for target arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir
 
 # All Build rule for target.
-arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_nodejs"
-.PHONY : arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num= "Built target gazebo_msgs_generate_messages_nodejs"
+.PHONY : arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
-arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
-.PHONY : arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-sensor_msgs_generate_messages_nodejs: arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+gazebo_msgs_generate_messages_nodejs: arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
 
-.PHONY : sensor_msgs_generate_messages_nodejs
+.PHONY : gazebo_msgs_generate_messages_nodejs
 
 # clean rule for target.
-arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
-.PHONY : arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/clean
+.PHONY : arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endeffectorcommand.dir
+
+# All Build rule for target.
+arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endeffectorcommand.dir/all:
+	$(MAKE) -f arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endeffectorcommand.dir/build.make arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endeffectorcommand.dir/depend
+	$(MAKE) -f arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endeffectorcommand.dir/build.make arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endeffectorcommand.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num= "Built target _arm_gazebo_generate_messages_check_deps_endeffectorcommand"
+.PHONY : arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endeffectorcommand.dir/all
+
+# Build rule for subdir invocation for target.
+arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endeffectorcommand.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endeffectorcommand.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
+.PHONY : arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endeffectorcommand.dir/rule
+
+# Convenience name for target.
+_arm_gazebo_generate_messages_check_deps_endeffectorcommand: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endeffectorcommand.dir/rule
+
+.PHONY : _arm_gazebo_generate_messages_check_deps_endeffectorcommand
+
+# clean rule for target.
+arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endeffectorcommand.dir/clean:
+	$(MAKE) -f arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endeffectorcommand.dir/build.make arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endeffectorcommand.dir/clean
+.PHONY : arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endeffectorcommand.dir/clean
 
 #=============================================================================
 # Target rules for target arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_eus.dir
@@ -2064,6 +2108,60 @@ sensor_msgs_generate_messages_lisp: arm_gazebo/CMakeFiles/sensor_msgs_generate_m
 arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean:
 	$(MAKE) -f arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
 .PHONY : arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_nodejs"
+.PHONY : arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
+.PHONY : arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_nodejs: arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# clean rule for target.
+arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+.PHONY : arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target arm_gazebo/CMakeFiles/endeffectorcontroller.dir
+
+# All Build rule for target.
+arm_gazebo/CMakeFiles/endeffectorcontroller.dir/all:
+	$(MAKE) -f arm_gazebo/CMakeFiles/endeffectorcontroller.dir/build.make arm_gazebo/CMakeFiles/endeffectorcontroller.dir/depend
+	$(MAKE) -f arm_gazebo/CMakeFiles/endeffectorcontroller.dir/build.make arm_gazebo/CMakeFiles/endeffectorcontroller.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=31,32 "Built target endeffectorcontroller"
+.PHONY : arm_gazebo/CMakeFiles/endeffectorcontroller.dir/all
+
+# Build rule for subdir invocation for target.
+arm_gazebo/CMakeFiles/endeffectorcontroller.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/endeffectorcontroller.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
+.PHONY : arm_gazebo/CMakeFiles/endeffectorcontroller.dir/rule
+
+# Convenience name for target.
+endeffectorcontroller: arm_gazebo/CMakeFiles/endeffectorcontroller.dir/rule
+
+.PHONY : endeffectorcontroller
+
+# clean rule for target.
+arm_gazebo/CMakeFiles/endeffectorcontroller.dir/clean:
+	$(MAKE) -f arm_gazebo/CMakeFiles/endeffectorcontroller.dir/build.make arm_gazebo/CMakeFiles/endeffectorcontroller.dir/clean
+.PHONY : arm_gazebo/CMakeFiles/endeffectorcontroller.dir/clean
 
 #=============================================================================
 # Target rules for target arm_gazebo/CMakeFiles/std_srvs_generate_messages_cpp.dir
@@ -2228,6 +2326,33 @@ arm_gazebo/CMakeFiles/tf_generate_messages_lisp.dir/clean:
 .PHONY : arm_gazebo/CMakeFiles/tf_generate_messages_lisp.dir/clean
 
 #=============================================================================
+# Target rules for target arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir
+
+# All Build rule for target.
+arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/all: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/all
+	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/depend
+	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num= "Built target arm_gazebo_gencpp"
+.PHONY : arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/all
+
+# Build rule for subdir invocation for target.
+arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
+.PHONY : arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/rule
+
+# Convenience name for target.
+arm_gazebo_gencpp: arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/rule
+
+.PHONY : arm_gazebo_gencpp
+
+# clean rule for target.
+arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/clean:
+	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/clean
+.PHONY : arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/clean
+
+#=============================================================================
 # Target rules for target arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir
 
 # All Build rule for target.
@@ -2255,31 +2380,58 @@ arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/clean:
 .PHONY : arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/clean
 
 #=============================================================================
-# Target rules for target arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir
+# Target rules for target arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir
 
 # All Build rule for target.
-arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/all: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/all
-	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/depend
-	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num= "Built target arm_gazebo_gencpp"
-.PHONY : arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/all
+arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/all:
+	$(MAKE) -f arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/build.make arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/depend
+	$(MAKE) -f arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/build.make arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num= "Built target _arm_gazebo_generate_messages_check_deps_ik"
+.PHONY : arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/all
 
 # Build rule for subdir invocation for target.
-arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/all
+arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
-.PHONY : arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/rule
+	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
+.PHONY : arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/rule
 
 # Convenience name for target.
-arm_gazebo_gencpp: arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/rule
+_arm_gazebo_generate_messages_check_deps_ik: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/rule
 
-.PHONY : arm_gazebo_gencpp
+.PHONY : _arm_gazebo_generate_messages_check_deps_ik
 
 # clean rule for target.
-arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/clean:
-	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/clean
-.PHONY : arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/clean
+arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/clean:
+	$(MAKE) -f arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/build.make arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/clean
+.PHONY : arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/clean
+
+#=============================================================================
+# Target rules for target arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_cpp"
+.PHONY : arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
+.PHONY : arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_cpp: arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# clean rule for target.
+arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+.PHONY : arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
 
 #=============================================================================
 # Target rules for target arm_gazebo/CMakeFiles/actionlib_generate_messages_py.dir
@@ -2550,36 +2702,6 @@ std_srvs_generate_messages_py: arm_gazebo/CMakeFiles/std_srvs_generate_messages_
 arm_gazebo/CMakeFiles/std_srvs_generate_messages_py.dir/clean:
 	$(MAKE) -f arm_gazebo/CMakeFiles/std_srvs_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/std_srvs_generate_messages_py.dir/clean
 .PHONY : arm_gazebo/CMakeFiles/std_srvs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir
-
-# All Build rule for target.
-arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/all: arm_lib/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_jointangles.dir/all
-arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_fk.dir/all
-arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/all: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/all
-	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/depend
-	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num=3,4,5 "Built target arm_gazebo_generate_messages_cpp"
-.PHONY : arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
-.PHONY : arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-arm_gazebo_generate_messages_cpp: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/rule
-
-.PHONY : arm_gazebo_generate_messages_cpp
-
-# clean rule for target.
-arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/clean:
-	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/clean
-.PHONY : arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/clean
 
 #=============================================================================
 # Target rules for target arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_py.dir
@@ -3047,8 +3169,8 @@ arm_gazebo/CMakeFiles/actionlib_generate_messages_cpp.dir/clean:
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages.dir/all: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs.dir/all
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages.dir/all: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_lisp.dir/all
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages.dir/all: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/all
-arm_gazebo/CMakeFiles/arm_gazebo_generate_messages.dir/all: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py.dir/all
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages.dir/all: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/all
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages.dir/all: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py.dir/all
 	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_generate_messages.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_generate_messages.dir/depend
 	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_generate_messages.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_generate_messages.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num= "Built target arm_gazebo_generate_messages"
@@ -3056,7 +3178,7 @@ arm_gazebo/CMakeFiles/arm_gazebo_generate_messages.dir/all: arm_gazebo/CMakeFile
 
 # Build rule for subdir invocation for target.
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
 .PHONY : arm_gazebo/CMakeFiles/arm_gazebo_generate_messages.dir/rule
@@ -3097,6 +3219,33 @@ _arm_gazebo_generate_messages_check_deps_jointangles: arm_gazebo/CMakeFiles/_arm
 arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_jointangles.dir/clean:
 	$(MAKE) -f arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_jointangles.dir/build.make arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_jointangles.dir/clean
 .PHONY : arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_jointangles.dir/clean
+
+#=============================================================================
+# Target rules for target arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endpositions.dir
+
+# All Build rule for target.
+arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endpositions.dir/all:
+	$(MAKE) -f arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endpositions.dir/build.make arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endpositions.dir/depend
+	$(MAKE) -f arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endpositions.dir/build.make arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endpositions.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num= "Built target _arm_gazebo_generate_messages_check_deps_endpositions"
+.PHONY : arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endpositions.dir/all
+
+# Build rule for subdir invocation for target.
+arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endpositions.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endpositions.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
+.PHONY : arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endpositions.dir/rule
+
+# Convenience name for target.
+_arm_gazebo_generate_messages_check_deps_endpositions: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endpositions.dir/rule
+
+.PHONY : _arm_gazebo_generate_messages_check_deps_endpositions
+
+# clean rule for target.
+arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endpositions.dir/clean:
+	$(MAKE) -f arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endpositions.dir/build.make arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endpositions.dir/clean
+.PHONY : arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_endpositions.dir/clean
 
 #=============================================================================
 # Target rules for target arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir
@@ -3178,60 +3327,6 @@ _arm_gazebo_generate_messages_check_deps_fk: arm_gazebo/CMakeFiles/_arm_gazebo_g
 arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_fk.dir/clean:
 	$(MAKE) -f arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_fk.dir/build.make arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_fk.dir/clean
 .PHONY : arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_fk.dir/clean
-
-#=============================================================================
-# Target rules for target arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir
-
-# All Build rule for target.
-arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_cpp"
-.PHONY : arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
-.PHONY : arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_cpp: arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# clean rule for target.
-arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
-.PHONY : arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir
-
-# All Build rule for target.
-arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/all:
-	$(MAKE) -f arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/build.make arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/depend
-	$(MAKE) -f arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/build.make arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aymen/Documents/arm_ws/build/CMakeFiles --progress-num= "Built target _arm_gazebo_generate_messages_check_deps_ik"
-.PHONY : arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/all
-
-# Build rule for subdir invocation for target.
-arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aymen/Documents/arm_ws/build/CMakeFiles 0
-.PHONY : arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/rule
-
-# Convenience name for target.
-_arm_gazebo_generate_messages_check_deps_ik: arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/rule
-
-.PHONY : _arm_gazebo_generate_messages_check_deps_ik
-
-# clean rule for target.
-arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/clean:
-	$(MAKE) -f arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/build.make arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/clean
-.PHONY : arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

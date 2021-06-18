@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "/home/aymen/Documents/arm_ws/devel/include/arm_gazebo/endeffectorcommand.h"
+  "/home/aymen/Documents/arm_ws/devel/include/arm_gazebo/endpositions.h"
   "/home/aymen/Documents/arm_ws/devel/include/arm_gazebo/fk.h"
   "/home/aymen/Documents/arm_ws/devel/include/arm_gazebo/ik.h"
   "/home/aymen/Documents/arm_ws/devel/include/arm_gazebo/jointangles.h"

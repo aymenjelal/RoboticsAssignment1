@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "/home/aymen/Documents/arm_ws/devel/share/common-lisp/ros/arm_gazebo/msg/endeffectorcommand.lisp"
+  "/home/aymen/Documents/arm_ws/devel/share/common-lisp/ros/arm_gazebo/msg/endpositions.lisp"
   "/home/aymen/Documents/arm_ws/devel/share/common-lisp/ros/arm_gazebo/msg/jointangles.lisp"
   "/home/aymen/Documents/arm_ws/devel/share/common-lisp/ros/arm_gazebo/srv/fk.lisp"
   "/home/aymen/Documents/arm_ws/devel/share/common-lisp/ros/arm_gazebo/srv/ik.lisp"
